@@ -1,10 +1,13 @@
 import mongoose, { ConnectOptions } from 'mongoose';
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/u-plumber', {
-      useUnifiedTopology: true,
-      useNewUrlParser: true,
-    } as ConnectOptions);
+    await mongoose.connect(
+      'mongodb+srv://hassan:hassan123@cluster0.cnj46.mongodb.net/cloudtech?retryWrites=true&w=majority',
+      {
+        useUnifiedTopology: true,
+        useNewUrlParser: true,
+      } as ConnectOptions
+    );
 
     console.log(`MongoDB is connected at `);
   } catch (error) {
